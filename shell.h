@@ -51,9 +51,8 @@ typedef struct liststr
 } list_t;
 
 /**
- * Define a structure for passing information to functions, ensuring a uniform
- * prototype for function pointer structs.
- *
+ * Define a structure for passing information to functions, ensuring a uniform prototype
+ * for function pointer structs.
  * @arg: String generated from getline containing arguments.
  * @argv: Array of strings generated from arguments.
  * @path: String path for the current command.
