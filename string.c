@@ -23,7 +23,8 @@ int _strlen(char *s)
  * @s1: The first string.
  * @s2: The second string.
  *
- * Return: A negative value if s1 < s2, a positive value if s1 > s2, and 0 if s1 == s2.
+ * Return: A negative value if s1 < s2, a positive value
+ * if s1 > s2, and 0 if s1 == s2.
  */
 int _strcmp(char *s1, char *s2)
 {
@@ -45,7 +46,8 @@ int _strcmp(char *s1, char *s2)
  * @haystack: The string to search.
  * @needle: The substring to find.
  *
- * Return: The address of the next character in haystack after the substring, or NULL if not found.
+ * Return: The address of the next character in haystack after the substring,
+ * or NULL if not found.
  */
 char *starts_with(const char *haystack, const char *needle)
 {

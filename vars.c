@@ -1,7 +1,8 @@
 #include "shell.h"
 
 /**
- * is_chain - Checks if the current character in the buffer is a chain delimiter.
+ * is_chain - Checks if the current character in the
+ * buffer is a chain delimiter.
  * @info: The parameter struct.
  * @buf: The character buffer.
  * @p: The address of the current position in buf.
@@ -36,7 +37,8 @@ int is_chain(info_t *info, char *buf, size_t *p)
 }
 
 /**
- * check_chain - Checks if we should continue chaining based on the last status.
+ * check_chain - Checks if we should continue chaining
+ * based on the last status.
  * @info: The parameter struct.
  * @buf: The character buffer.
  * @p: The address of the current position in buf.

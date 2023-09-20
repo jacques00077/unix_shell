@@ -4,7 +4,8 @@
  * get_history_file - Retrieves the path to the history file.
  * @info: Pointer to the parameter struct.
  *
- * Return: Allocated string containing the history file path, or NULL on failure.
+ * Return: Allocated string containing the history file path,
+ * or NULL on failure.
  */
 
 char *get_history_file(info_t *info)

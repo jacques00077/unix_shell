@@ -44,7 +44,8 @@ void set_info(info_t *info, char **av)
 }
 
 /**
- * free_info - Frees the fields of the info_t struct based on the "all" parameter.
+ * free_info - Frees the fields of the info_t struct based on the
+ * "all" parameter.
  * @info: Pointer to the info_t struct.
  * @all: True if freeing all fields, otherwise only specific fields are freed.
  */

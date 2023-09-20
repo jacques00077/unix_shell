@@ -51,7 +51,8 @@ typedef struct liststr
 } list_t;
 
 /**
- * Define a structure for passing information to functions, ensuring a uniform prototype
+ * Define a structure for passing information to functions,
+ * ensuring a uniform prototype
  * for function pointer structs.
  * @arg: String generated from getline containing arguments.
  * @argv: Array of strings generated from arguments.
