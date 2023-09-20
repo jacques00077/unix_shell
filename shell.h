@@ -18,25 +18,24 @@
 #define BUF_FLUSH -1
 
 /* Define constants for command chaining types. */
-#define CMD_NORM    0
-#define CMD_OR      1
-#define CMD_AND     2
-#define CMD_CHAIN   3
+#define CMD_NORM	0
+#define CMD_OR		1
+#define CMD_AND		2
+#define CMD_CHAIN	3
 
 /* Define options for converting numbers. */
-#define CONVERT_LOWERCASE   1
-#define CONVERT_UNSIGNED    2
+#define CONVERT_LOWERCASE	1
+#define CONVERT_UNSIGNED	2
 
 /* Flag indicating whether system getline() is used. */
 #define USE_GETLINE 0
 #define USE_STRTOK 0
 
-/* Define history file settings. */
-#define HIST_FILE   ".simple_shell_history"
-#define HIST_MAX    4096
+#define HIST_FILE	".simple_shell_history"
+#define HIST_MAX	4096
 
-/* External environment variable. */
 extern char **environ;
+
 
 /**
  * Define a singly linked list structure for strings.
@@ -46,14 +45,15 @@ extern char **environ;
  */
 typedef struct liststr
 {
-    int num;
-    char *str;
-    struct liststr *next;
+	int num;
+	char *str;
+	struct liststr *next;
 } list_t;
 
 /**
- * Define a structure for passing information to functions, ensuring a uniform prototype
- * for function pointer structs.
+ * Define a structure for passing information to functions, ensuring a uniform
+ * prototype for function pointer structs.
+ *
  * @arg: String generated from getline containing arguments.
  * @argv: Array of strings generated from arguments.
  * @path: String path for the current command.
@@ -73,32 +73,33 @@ typedef struct liststr
  * @readfd: File descriptor from which to read line input.
  * @histcount: History line number count.
  */
+
 typedef struct passinfo
 {
-    char *arg;
-    char **argv;
-    char *path;
-    int argc;
-    unsigned int line_count;
-    int err_num;
-    int linecount_flag;
-    char *fname;
-    list_t *env;
-    list_t *history;
-    list_t *alias;
-    char **environ;
-    int env_changed;
-    int status;
+	char *arg;
+	char **argv;
+	char *path;
+	int argc;
+	unsigned int line_count;
+	int err_num;
+	int linecount_flag;
+	char *fname;
+	list_t *env;
+	list_t *history;
+	list_t *alias;
+	char **environ;
+	int env_changed;
+	int status;
 
-    char **cmd_buf; /* Pointer to cmd ; chain buffer, for memory management */
-    int cmd_buf_type; /* CMD_type ||, &&, ; */
-    int readfd;
-    int histcount;
+	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
+	int cmd_buf_type; /* CMD_type ||, &&, ; */
+	int readfd;
+	int histcount;
 } info_t;
 
 #define INFO_INIT \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
-        0, 0, 0}
+		0, 0, 0}
 
 /**
  * Define a structure for built-in commands.
@@ -107,8 +108,8 @@ typedef struct passinfo
  */
 typedef struct builtin
 {
-    char *type;
-    int (*func)(info_t *);
+	char *type;
+	int (*func)(info_t *);
 } builtin_table;
 
 /* Function declarations and more code... */
