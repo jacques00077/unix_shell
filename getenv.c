@@ -48,7 +48,8 @@ int _unsetenv(info_t *info, char *var)
 }
 
 /**
- * _setenv - Initializes a new environment variable or modifies an existing one.
+ * _setenv - Initializes a new environment variable
+ * or modifies an existing one.
  * @info: Parameter struct used to maintain a constant function prototype.
  * @var: The name of the environment variable to be set or modified.
  * @value: The value to be assigned to the environment variable.
